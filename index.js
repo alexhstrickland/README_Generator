@@ -64,12 +64,17 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    
+    fs.writeFile(fileName, data, (err) => {
+    err ? console.log(err) : console.log("Success");
+    });
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    questions();
+   const output = './output';
+   if((fs.existsSync(output)) !== true) {
+       fs.mkdirSync(output);
+   }
 }
 
 // Function call to initialize app
