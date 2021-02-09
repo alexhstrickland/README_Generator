@@ -14,11 +14,27 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  ![GitHub License]()
+
   ## Description
 
   ## Table of Contents
 
+  * [Description](#Description)
+  * [Table of Contents](#Table of Contents)
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [License](#License)
+  * [Contributing](#contributing)
+  * [Tests](#Tests)
+  * [Questions](#Questions)
+  * [Credits](#Credits)
+
   ## Installation
+
+  To install necessary dependencies, please run the following command:
+
+  
 
   ## Usage
 
@@ -29,6 +45,7 @@ function generateMarkdown(data) {
   ## Tests
 
   ## Questions
+  For any questions about the project, please contact me at ${data.email} or visit my GithHub profile ${"[" + data.userName + "]" + "(https://github.com/" + data.userName + ")"}
 
 `;
 }
