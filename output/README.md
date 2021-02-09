@@ -44,7 +44,7 @@
   
   * Email - alexhstrickland@gmail.com 
   
-  or visit my GithHub profile
+  or visit my GithHub profile:
   
   * GitHub - [alexhstrickland](https://github.com/alexhstrickland)
 
