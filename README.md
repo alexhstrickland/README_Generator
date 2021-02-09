@@ -26,6 +26,8 @@
   ## Usage
   Please acquire the inquirer package for this application. Answer all questions fully to generate a professional, quality README file.
 
+  For a demonstration of how to use the application, please view the following video: [Application DEMO](https://drive.google.com/file/d/1UZql367xDXxexfsyuAd-DlOHWx4r_acU/view?usp=sharing)
+
   ## License
   This project is covered under the ISC license. Visit the following link for more information on this license: [ISC](https://opensource.org/licenses/ISC)
 

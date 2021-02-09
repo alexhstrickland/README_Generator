@@ -3,7 +3,7 @@
   [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
   ## Description
-  For this project, I created an application that uses a command line tool to generate a professional README file based on the users input. The inquirer package was used for this application to acquire the users information. The README contains sections for a title, description, table of contents, installation, usage, license, contributing, tests, and questions.
+  Command line function to create a README
 
   ## Table of Contents
 
@@ -24,14 +24,14 @@
   ```
 
   ## Usage
-  Please acquire the inquirer package for this application. Answer all questions fully to generate a professional, quality README file.
+  Instructions
 
   ## License
   This project is covered under the ISC license. Visit the following link for more information on this license: [ISC](https://opensource.org/licenses/ISC)
 
 
   ## Contributing
-  
+  instructions for contributing
 
   ## Tests
   To test, please run the following command:
@@ -44,7 +44,7 @@
   
   * Email - alexhstrickland@gmail.com 
   
-  or visit my GithHub profile:
+  or visit my GithHub profile
   
   * GitHub - [alexhstrickland](https://github.com/alexhstrickland)
 
