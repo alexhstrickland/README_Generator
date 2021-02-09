@@ -5,11 +5,10 @@ const Choices = require("inquirer/lib/objects/choices");
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
 // TODO: Create an array of questions for user input
-const questions = [
-    inquirer.prompt([
+const userInput = [
             {
                 type: 'input',
-                message: 'Please enter your Github username: ',
+                message: 'Please enter your Github username? ',
                 name: 'userName',
             },
             {
@@ -55,7 +54,6 @@ const questions = [
                 message: 'Please enter instructions for contributing: ',
                 name: 'contribution',
             },
-        ])
 ];
 
 // TODO: Create a function to write README file
@@ -71,10 +69,13 @@ function init() {
    if((fs.existsSync(output)) !== true) {
        fs.mkdirSync(output);
    }
-
-   inquirer.prompt(questions).then(answers => {
-       writeToFile(output + "/README.md", generateMarkdown(answers));
+   questions().then(data => {
+       writeToFile(output + "/README.md", generateMarkdown(data));
    })
+}
+
+function questions() {
+    return inquirer.prompt(userInput);
 }
 
 // Function call to initialize app
