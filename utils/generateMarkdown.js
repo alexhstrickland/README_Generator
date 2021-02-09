@@ -105,7 +105,13 @@ function generateMarkdown(data) {
   \`\`\`
 
   ## Questions
-  For any questions about the project, please contact me at ${data.email} or visit my GithHub profile ${"[" + data.userName + "]" + "(https://github.com/" + data.userName + ")"}
+  For any questions about the project, please contact me by either of the following links:
+  
+  * Email - ${data.email} 
+  
+  or visit my GithHub profile
+  
+  * GitHub - ${"[" + data.userName + "]" + "(https://github.com/" + data.userName + ")"}
 
 `;
 }
