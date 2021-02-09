@@ -6,60 +6,56 @@ const generateMarkdown = require("./utils/generateMarkdown.js");
 
 // TODO: Create an array of questions for user input
 const questions = [
-    inquirer
-        .prompt(
+    inquirer.prompt([
             {
                 type: 'input',
                 message: 'Please enter your Github username: ',
-                name:'username'
+                name: 'userName',
             },
             {
                 type: 'input',
                 message: 'Please enter your email address: ',
-                name: 'email'
+                name: 'email',
             },
             {
                 type: 'input',
                 message: 'What is the title of the project?',
-                name: 'title'
+                name: 'title',
             },
             {
                 type: 'input',
                 message: 'Please include a short description of your project: ',
-                name: 'description'
+                name: 'description',
             },
             {
                 type: 'list',
                 message: 'Please choose a license for your project: ',
                 name: 'license',
-                choices: ['ISC', 'None', 'MIT', 'BSD', 'Apache 2.0']
+                choices: ['ISC', 'None', 'MIT', 'BSD', 'Apache 2.0'],
             },
             {
                 type: 'input',
                 message: 'Enter the command you would like to use for installation: ',
                 name: 'install',
-                default: 'npm install'
+                default: 'npm install',
             },
             {
                 type: 'input',
                 message: 'Enter the command you would like to use for testing: ',
                 name: 'test',
-                default: 'npm test'
+                default: 'npm test',
             },
             {
                 type: 'input',
                 message: 'Please enter instructions for usage: ',
-                name: 'usage'
+                name: 'usage',
             },
             {
                 type:'input',
                 message: 'Please enter instructions for contributing: ',
-                name: 'contribution'
+                name: 'contribution',
             },
-        )
-
-
-
+        ])
 ];
 
 // TODO: Create a function to write README file
@@ -75,7 +71,13 @@ function init() {
    if((fs.existsSync(output)) !== true) {
        fs.mkdirSync(output);
    }
+
+   inquirer.prompt(questions).then(answers => {
+       writeToFile(output + "/README.md", generateMarkdown(answers));
+   })
 }
 
 // Function call to initialize app
 init();
+
+
